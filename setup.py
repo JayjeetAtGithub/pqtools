@@ -7,7 +7,7 @@ from subprocess import call
 
 from setuptools import Command, find_packages, setup
 
-from pqinfo import __version__
+from pqtools import __version__
 
 
 this_dir = abspath(dirname(__file__))
@@ -28,16 +28,16 @@ class RunTests(Command):
 
     def run(self):
         """Run all tests!"""
-        errno = call(['py.test', '--cov=pqinfo', '--cov-report=term-missing'])
+        errno = call(['py.test', '--cov=pqtools', '--cov-report=term-missing'])
         raise SystemExit(errno)
 
 
 setup(
-    name = 'pqinfo',
+    name = 'pqtools',
     version = __version__,
     description = 'A CLI tool to see the details of a Parquet file',
     long_description = long_description,
-    url = 'https://github.com/JayjeetAtGithub/pqinfo',
+    url = 'https://github.com/JayjeetAtGithub/pqtools',
     author = 'Jayjeet Chakraborty',
     author_email = 'jayjeetc@ucsc.edu',
     license = 'UNLICENSE',
@@ -63,7 +63,7 @@ setup(
     },
     entry_points = {
         'console_scripts': [
-            'pqinfo=pqinfo.cli:main',
+            'pqtools=pqtools.cli:main',
         ],
     },
     cmdclass = {'test': RunTests},

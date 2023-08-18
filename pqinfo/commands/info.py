@@ -1,4 +1,4 @@
-"""The show command."""
+"""The info command."""
 
 
 from .base import Base
@@ -8,7 +8,7 @@ import os
 import pyarrow.parquet as pq
 
 
-class Show(Base):
+class Info(Base):
     def run(self):
         filepath = self.options['<filename>']
         arrow_table = pq.read_table(filepath)

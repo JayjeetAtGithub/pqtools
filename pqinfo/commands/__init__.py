@@ -1,1 +1,1 @@
-from .show import *
+from .info import *

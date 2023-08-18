@@ -1,4 +1,4 @@
-pqinfo
+pqtools
 =========
 
 *A skeleton command line program in Python.*
